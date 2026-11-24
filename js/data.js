@@ -5,11 +5,11 @@
    ========================================================================== */
 
 const CHARS = {
-  du:   { name:'杜丽娘', role:'太守之女', fig:'assets/img/fig_du.png' },
-  liu:  { name:'柳梦梅', role:'岭南书生', fig:'assets/img/fig_liu.png' },
-  chun: { name:'春香',   role:'丽娘侍女', fig:'assets/img/fig_chun.png' },
-  bao:  { name:'杜宝',   role:'南安太守', fig:'assets/img/fig_bao.png' },
-  chen: { name:'陈最良', role:'杜府塾师', fig:'assets/img/fig_chen.png' },
+  du:   { name:'杜丽娘', role:'太守之女', fig:'assets/img/fig_du.png?v=5p' },
+  liu:  { name:'柳梦梅', role:'岭南书生', fig:'assets/img/fig_liu.png?v=5p' },
+  chun: { name:'春香',   role:'丽娘侍女', fig:'assets/img/fig_chun.png?v=5p' },
+  bao:  { name:'杜宝',   role:'南安太守', fig:'assets/img/fig_bao.png?v=5p' },
+  chen: { name:'陈最良', role:'杜府塾师', fig:'assets/img/fig_chen.png?v=5p' },
   shi:  { name:'石道姑', role:'紫阳宫道姑', fig:'' }
 };
 
