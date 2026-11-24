@@ -310,7 +310,7 @@
     });
     const wrap = el('div', 'trace-wrap');
     const canvas = el('div', 'trace-canvas',
-      '<img src="assets/img/fig_du.jpg" alt="">' +
+      '<img src="assets/img/fig_du_painting.jpg" alt="">' +
       '<svg viewBox="0 0 200 290" aria-hidden="true"></svg>' +
       '<span class="stamp">丽娘</span>');
     const right = el('div', '');
@@ -511,7 +511,7 @@
     });
     const wrap = el('div', 'call-wrap');
     wrap.innerHTML =
-      '<div class="call-portrait"><img src="assets/img/fig_du.jpg" alt="画中女子"><span class="ring"></span></div>' +
+      '<div class="call-portrait"><img src="assets/img/fig_du_painting.jpg" alt="画中女子"><span class="ring"></span></div>' +
       '<p class="call-count" data-count>—</p>' +
       '<p style="font-size:.8em;color:var(--ink-3);letter-spacing:.06em">点画，或按空格。三声之间不要超过两息。</p>';
     const btn = el('button', 'btn primary', '叫 她 的 名 字');

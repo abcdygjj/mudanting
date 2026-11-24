@@ -255,11 +255,11 @@ img{display:block;max-width:100%}
 }
 @keyframes dlgIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .dlg-portrait{position:relative;z-index:3}
-.portrait-inner{position:absolute;left:6px;bottom:0;width:170px;height:330px;display:flex;align-items:flex-end;justify-content:center;
-  filter:drop-shadow(0 14px 20px rgba(50,32,18,.28))}
-.portrait-inner img{max-height:100%;width:auto;object-fit:contain;object-position:bottom;
-  -webkit-mask-image:linear-gradient(180deg,#000 78%,rgba(0,0,0,.35) 94%,transparent 100%);
-  mask-image:linear-gradient(180deg,#000 78%,rgba(0,0,0,.35) 94%,transparent 100%);
+.portrait-inner{position:absolute;left:2px;bottom:-2px;width:172px;height:360px;display:flex;align-items:flex-end;justify-content:center;
+  filter:drop-shadow(0 10px 16px rgba(50,32,18,.24))}
+.portrait-inner img{flex:0 0 auto;max-height:100%;max-width:212px;width:auto;object-fit:contain;object-position:bottom;
+  -webkit-mask-image:linear-gradient(180deg,#000 90%,rgba(0,0,0,.6) 96%,transparent 100%);
+  mask-image:linear-gradient(180deg,#000 90%,rgba(0,0,0,.6) 96%,transparent 100%);
   animation:portraitIn .6s var(--ease) both}
 @keyframes portraitIn{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
 .dlg-portrait.empty .portrait-inner{opacity:0}
@@ -362,7 +362,8 @@ img{display:block;max-width:100%}
 .canon-src{font-size:.68em;color:var(--vermilion);letter-spacing:.08em;margin-top:8px}
 .canon-note{font-size:.8em;line-height:1.9;color:var(--ink-2);margin-top:10px;letter-spacing:.02em}
 .person-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed rgba(120,92,58,.22)}
-.person-row img{width:64px;height:96px;object-fit:cover;object-position:top center;border:1px solid rgba(120,92,58,.3);filter:saturate(.95)}
+.person-row img{width:auto;height:100px;max-width:78px;object-fit:contain;object-position:bottom center;flex:0 0 auto;
+  filter:drop-shadow(0 4px 7px rgba(90,66,34,.16)) saturate(.96)}
 .person-row .pr-n{font-family:var(--kai);font-size:1.1em;letter-spacing:.2em}
 .person-row .pr-r{font-size:.68em;color:var(--vermilion);letter-spacing:.14em;margin-left:8px}
 .person-row .pr-d{font-size:.8em;line-height:1.85;color:var(--ink-2);margin-top:4px}
