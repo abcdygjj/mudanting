@@ -3,38 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>鐗′腹浜?路 涓€鍦哄彲娓哥殑姊?/title>
-<meta name="description" content="浠ユ堡鏄剧銆婄墶涓逛涵銆嬩负鐏垫劅鐨勪簰鍔ㄥ彊浜嬫父鎴忥細娓稿洯銆佹儕姊︺€佸姊︺€佹嬀鐢汇€佽繕榄傘€?>
+<title>牡丹亭 · 一场可游的梦</title>
+<meta name="description" content="以汤显祖《牡丹亭》为灵感的互动叙事游戏：游园、惊梦、寻梦、拾画、还魂。">
 <link rel="stylesheet" href="css/game.css?v=5p">
 </head>
 <body class="font-md">
 
-<!-- 杞藉叆 -->
+<!-- 载入 -->
 <div id="loader" aria-hidden="true">
-  <div class="loader-seal">澶?/div>
+  <div class="loader-seal">夢</div>
   <div class="loader-line"></div>
 </div>
 
-<!-- 寮€濮嬬晫闈?-->
-<section id="start" aria-label="寮€濮嬬晫闈?>
+<!-- 开始界面 -->
+<section id="start" aria-label="开始界面">
   <div class="start-bg" style="background-image:url('assets/img/scene_night.jpg')"></div>
   <div class="start-wash"></div>
   <div class="start-inner">
-    <div class="start-eyebrow">涓村窛鍥涙ⅵ 路 鍏朵竴</div>
-    <h1 class="start-logo"><img src="assets/img/logo.jpg" alt="鐗′腹浜?></h1>
-    <p class="start-sub">涓€鍦哄彲娓哥殑姊?/p>
-    <p class="start-quote">鎯呬笉鐭ユ墍璧凤紝涓€寰€鑰屾繁銆?span class="src">鈥斺€旀堡鏄剧銆婄墶涓逛涵銆嬮璇?/span></p>
+    <div class="start-eyebrow">临川四梦 · 其一</div>
+    <h1 class="start-logo"><img src="assets/img/logo.jpg" alt="牡丹亭"></h1>
+    <p class="start-sub">一场可游的梦</p>
+    <p class="start-quote">情不知所起，一往而深。<span class="src">——汤显祖《牡丹亭》题词</span></p>
     <div class="start-actions">
-      <button class="btn primary" id="btnStart">鍏?鍥?/button>
-      <button class="btn" id="btnContinue" hidden>缁?姊?/button>
-      <button class="btn ghost" id="btnStartJournal">瀵?璇?/button>
+      <button class="btn primary" id="btnStart">入 园</button>
+      <button class="btn" id="btnContinue" hidden>续 梦</button>
+      <button class="btn ghost" id="btnStartJournal">导 读</button>
     </div>
-    <p class="start-note">鏀圭紪鑷堡鏄剧銆婄墶涓逛涵銆嬄?闈炲晢涓氫簰鍔ㄥ彊浜嬩範浣?br>鐢婚潰銆侀煶涔愬潎涓烘湰浣滃師鍒涚礌鏉愶紝鏇茶瘝鍘熸枃鍙﹁鏍囨敞</p>
+    <p class="start-note">改编自汤显祖《牡丹亭》· 非商业互动叙事习作<br>画面、音乐均为本作原创素材，曲词原文另行标注</p>
   </div>
   <div class="start-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 </section>
 
-<!-- 娓告垙涓荤晫闈?-->
+<!-- 游戏主界面 -->
 <main id="game" hidden>
   <div id="stage" class="scene-spring">
     <div class="bg bg-a"></div>
@@ -49,22 +49,22 @@
 
     <header class="hud">
       <div class="chapter-mark">
-        <div class="seal" id="chapterNo">涓€</div>
+        <div class="seal" id="chapterNo">一</div>
         <div class="chapter-text">
-          <span class="ch-label">绗?<b id="chapterNum">涓€</b> 鍑?/span>
-          <span class="ch-name" id="chapterName">娓稿洯</span>
+          <span class="ch-label">第 <b id="chapterNum">一</b> 出</span>
+          <span class="ch-name" id="chapterName">游园</span>
         </div>
       </div>
       <div class="hud-objective" id="objective" aria-live="polite"></div>
       <nav class="hud-tools">
-        <button class="tool" id="btnGuide" title="瀵艰锛堜汉鐗┿€佹洸璇嶃€佸吀鏁咃級"><span>瀵?/span></button>
-        <button class="tool" id="btnJournal" title="鏈锛圝锛?><span>璁?/span><em id="journalDot" hidden></em></button>
-        <button class="tool" id="btnSound" title="澹伴煶寮€鍏?><span id="soundGlyph">闊?/span></button>
-        <button class="tool" id="btnSettings" title="璁剧疆"><span>璁?/span></button>
+        <button class="tool" id="btnGuide" title="导读（人物、曲词、典故）"><span>导</span></button>
+        <button class="tool" id="btnJournal" title="札记（J）"><span>记</span><em id="journalDot" hidden></em></button>
+        <button class="tool" id="btnSound" title="声音开关"><span id="soundGlyph">音</span></button>
+        <button class="tool" id="btnSettings" title="设置"><span>设</span></button>
       </nav>
     </header>
 
-    <div class="hotspots" id="hotspots" aria-label="鍙帰绱箣澶?></div>
+    <div class="hotspots" id="hotspots" aria-label="可探索之处"></div>
 
     <div class="scene-tag" id="sceneTag" aria-hidden="true">
       <span class="tag-name"></span>
@@ -85,8 +85,8 @@
           <p class="dlg-text" id="dlgText"></p>
           <div class="dlg-choices" id="dlgChoices"></div>
           <div class="dlg-foot">
-            <span class="dlg-hint" id="dlgHint">杞荤偣缁х画</span>
-            <span class="dlg-caret" id="dlgCaret">鈻?/span>
+            <span class="dlg-hint" id="dlgHint">轻点继续</span>
+            <span class="dlg-caret" id="dlgCaret">▾</span>
           </div>
         </div>
       </div>
@@ -96,108 +96,108 @@
   </div>
 </main>
 
-<!-- 绔犲洖鐗囧ご -->
+<!-- 章回片头 -->
 <div id="chapterCard" class="chapter-card" hidden role="dialog" aria-modal="true" aria-labelledby="ccTitle">
   <div class="cc-paper">
-    <div class="cc-no" id="ccNo">绗竴鍑?/div>
-    <h2 class="cc-title" id="ccTitle">娓稿洯</h2>
+    <div class="cc-no" id="ccNo">第一出</div>
+    <h2 class="cc-title" id="ccTitle">游园</h2>
     <p class="cc-epi" id="ccEpi"></p>
     <p class="cc-note" id="ccNote"></p>
-    <button class="btn primary" id="ccEnter">鎺€ 甯?/button>
+    <button class="btn primary" id="ccEnter">掀 帘</button>
   </div>
   <div class="cc-wash"></div>
 </div>
 
-<!-- 鏈鎶藉眽 -->
+<!-- 札记抽屉 -->
 <aside id="journal" class="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="journalTitle">
   <div class="drawer-head">
     <div>
-      <span class="drawer-kicker">鑺辩灏忚</span>
-      <h2 id="journalTitle">鏈</h2>
+      <span class="drawer-kicker">花笺小记</span>
+      <h2 id="journalTitle">札记</h2>
     </div>
-    <button class="icon-btn" id="journalClose" aria-label="鍏抽棴鏈">脳</button>
+    <button class="icon-btn" id="journalClose" aria-label="关闭札记">×</button>
   </div>
   <nav class="tabs" id="journalTabs" role="tablist">
-    <button class="tab active" data-tab="image" role="tab">鎰忚薄</button>
-    <button class="tab" data-tab="canon" role="tab">鏇茶瘝</button>
-    <button class="tab" data-tab="person" role="tab">浜虹墿</button>
-    <button class="tab" data-tab="note" role="tab">鏈</button>
+    <button class="tab active" data-tab="image" role="tab">意象</button>
+    <button class="tab" data-tab="canon" role="tab">曲词</button>
+    <button class="tab" data-tab="person" role="tab">人物</button>
+    <button class="tab" data-tab="note" role="tab">札记</button>
   </nav>
   <div class="drawer-body" id="journalBody"></div>
-  <div class="drawer-foot"><span id="journalCount"></span><span class="muted">鏀堕泦涓嶈閲嶅锛岄敊杩囩殑鍙湪閲嶆父鏃惰ˉ榻?/span></div>
+  <div class="drawer-foot"><span id="journalCount"></span><span class="muted">收集不设重复，错过的可在重游时补齐</span></div>
 </aside>
 
-<!-- 瀵艰 -->
+<!-- 导读 -->
 <aside id="guide" class="drawer wide" hidden role="dialog" aria-modal="true" aria-labelledby="guideTitle">
   <div class="drawer-head">
     <div>
-      <span class="drawer-kicker">涓嶅繀鍏堣杩囧師钁?/span>
-      <h2 id="guideTitle">瀵艰</h2>
+      <span class="drawer-kicker">不必先读过原著</span>
+      <h2 id="guideTitle">导读</h2>
     </div>
-    <button class="icon-btn" id="guideClose" aria-label="鍏抽棴瀵艰">脳</button>
+    <button class="icon-btn" id="guideClose" aria-label="关闭导读">×</button>
   </div>
   <nav class="tabs" id="guideTabs" role="tablist">
-    <button class="tab active" data-tab="story" role="tab">鏁呬簨</button>
-    <button class="tab" data-tab="people" role="tab">浜虹墿</button>
-    <button class="tab" data-tab="lines" role="tab">鏇茶瘝</button>
-    <button class="tab" data-tab="allusion" role="tab">鍏告晠</button>
+    <button class="tab active" data-tab="story" role="tab">故事</button>
+    <button class="tab" data-tab="people" role="tab">人物</button>
+    <button class="tab" data-tab="lines" role="tab">曲词</button>
+    <button class="tab" data-tab="allusion" role="tab">典故</button>
   </nav>
   <div class="drawer-body" id="guideBody"></div>
 </aside>
 
-<!-- 璁剧疆 -->
+<!-- 设置 -->
 <div id="settings" class="modal settings-modal" hidden role="dialog" aria-modal="true" aria-labelledby="setTitle">
   <div class="modal-paper">
     <div class="modal-head">
-      <h2 id="setTitle">璁?缃?/h2>
-      <button class="icon-btn" id="settingsClose" aria-label="鍏抽棴璁剧疆">脳</button>
+      <h2 id="setTitle">设 置</h2>
+      <button class="icon-btn" id="settingsClose" aria-label="关闭设置">×</button>
     </div>
     <div class="set-row">
-      <label>鏂囧瓧澶у皬</label>
+      <label>文字大小</label>
       <div class="seg" id="setFont">
-        <button data-v="sm">灏?/button><button data-v="md" class="on">涓?/button><button data-v="lg">澶?/button>
+        <button data-v="sm">小</button><button data-v="md" class="on">中</button><button data-v="lg">大</button>
       </div>
     </div>
     <div class="set-row">
-      <label>闊抽噺 <b id="volVal">60</b></label>
+      <label>音量 <b id="volVal">60</b></label>
       <input type="range" id="setVolume" min="0" max="100" value="60">
     </div>
     <div class="set-row">
-      <label>鍑忓皯鍔ㄦ€佷笌闂儊</label>
+      <label>减少动态与闪烁</label>
       <button class="switch" id="setMotion" role="switch" aria-checked="false"><i></i></button>
     </div>
     <div class="set-row">
-      <label>绾跨储鎻愮ず</label>
+      <label>线索提示</label>
       <button class="switch on" id="setHints" role="switch" aria-checked="true"><i></i></button>
     </div>
     <div class="set-row">
-      <label>鎻愮伅鐓ф槑锛堢鍥涚珷锛?/label>
+      <label>提灯照明（第四章）</label>
       <button class="switch" id="setLamp" role="switch" aria-checked="false"><i></i></button>
     </div>
     <div class="set-actions">
-      <button class="btn ghost danger" id="setRestart">浠庡ご寮€濮?/button>
-      <button class="btn primary" id="settingsOk">濂?/button>
+      <button class="btn ghost danger" id="setRestart">从头开始</button>
+      <button class="btn primary" id="settingsOk">好</button>
     </div>
-    <p class="set-note">瀛楀箷濮嬬粓寮€鍚紱鎵€鏈夎皽棰樺潎鍙烦杩囷紝璺宠繃涓嶄細闃绘柇涓荤嚎銆?/p>
+    <p class="set-note">字幕始终开启；所有谜题均可跳过，跳过不会阻断主线。</p>
   </div>
 </div>
 
-<!-- 璋滈涓庢紨鍑哄鍣?-->
+<!-- 谜题与演出容器 -->
 <div id="modalRoot"></div>
 
-<!-- 缁撳眬 -->
+<!-- 结局 -->
 <section id="ending" class="ending" hidden>
   <div class="ending-bg"></div>
   <div class="ending-inner">
-    <div class="ending-kicker" id="endingKicker">灏惧０</div>
-    <h2 id="endingTitle">浜洪棿鏄?/h2>
+    <div class="ending-kicker" id="endingKicker">尾声</div>
+    <h2 id="endingTitle">人间春</h2>
     <div class="ending-text" id="endingText"></div>
-    <p class="ending-quote">鎯呬笉鐭ユ墍璧凤紝涓€寰€鑰屾繁銆?span class="src">鈥斺€旀堡鏄剧銆婄墶涓逛涵銆嬮璇?/span></p>
+    <p class="ending-quote">情不知所起，一往而深。<span class="src">——汤显祖《牡丹亭》题词</span></p>
     <div class="ending-actions">
-      <button class="btn primary" id="endingJournal">缈荤湅鏈</button>
-      <button class="btn ghost" id="endingAgain">鍐嶈蛋涓€閬?/button>
+      <button class="btn primary" id="endingJournal">翻看札记</button>
+      <button class="btn ghost" id="endingAgain">再走一遍</button>
     </div>
-    <p class="ending-note">鏈綔浠ャ€婄墶涓逛涵銆嬩负鐏垫劅鏀圭紪锛屽墽鎯呭鐧戒笌棰樼敾璇椾负娓告垙鍘熷垱锛涙爣娉ㄣ€屽師鏂囥€嶈€呬负姹ゆ樉绁栧師鏂囨憳褰曘€?/p>
+    <p class="ending-note">本作以《牡丹亭》为灵感改编，剧情对白与题画诗为游戏原创；标注「原文」者为汤显祖原文摘录。</p>
   </div>
 </section>
 
